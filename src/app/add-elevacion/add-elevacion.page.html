@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Nueva Elevacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Clave IGECEM</ion-label>
+    <ion-input type="text" [(ngModel)]="elevacion.itemID" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="elevacion.nombre_municipio" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Elevacion</ion-label>
+    <ion-input type="text" [(ngModel)]="elevacion.elevacion" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Altitud</ion-label>
+    <ion-input type="text" [(ngModel)]="elevacion.altitud" required></ion-input>
+  </ion-item>
+
+ 
+
+  <ion-button
+    class="ion-padding"
+    color="primary"
+    expand="full"
+    (click)="createElevacion(elevacion)"
+    >Agregar</ion-button
+  >
+</ion-content>

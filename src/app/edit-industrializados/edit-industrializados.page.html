@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Editar Municipio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Clave IGECEM</ion-label>
+    <ion-input type="text" [(ngModel)]="industrializado.itemID" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="industrializado.nombre_municipio" required></ion-input>
+  </ion-item>
+
+ 
+
+  <ion-button
+    class="ion-padding"
+    color="primary"
+    expand="full"
+    (click)="updateIndustrializado(industrializado)"
+    >Actualizar</ion-button
+  >
+</ion-content>

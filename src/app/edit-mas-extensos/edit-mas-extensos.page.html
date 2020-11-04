@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Editar Municipio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Clave IGECEM</ion-label>
+    <ion-input type="text" [(ngModel)]="extenso.itemID" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="extenso.nombre_municipio" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Superficie</ion-label>
+    <ion-input type="text" [(ngModel)]="extenso.superficie" required></ion-input>
+  </ion-item>
+
+ 
+
+  <ion-button
+    class="ion-padding"
+    color="primary"
+    expand="full"
+    (click)="updateExtenso(extenso)"
+    >Actualizar</ion-button
+  >
+</ion-content>

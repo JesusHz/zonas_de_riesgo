@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Elevaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addElevacion()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let elevacion of elevaciones">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2><b>ID: </b>{{ elevacion.itemID }}</h2>
+          <h2><b>Nombre: </b>{{ elevacion.nombre_municipio }}</h2>
+          <h2><b>Elevacion: </b></h2><p>{{ elevacion.elevacion }}</p>
+          <h2><b>Altitud: </b>{{ elevacion.altitud }}</h2>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option (click)="editElevacion(elevacion.id)">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteElevacion(elevacion.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  
+</ion-content>
+<ion-button
+    class="ion-padding"
+    color="light"
+    expand="full"
+    [routerLink]="['/home']"
+    >Regresar</ion-button
+  >

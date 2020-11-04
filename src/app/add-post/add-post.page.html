@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Nuevo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="post.nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cantidad</ion-label>
+    <ion-input type="text" [(ngModel)]="post.cantidad" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Precio</ion-label>
+    <ion-input type="text" [(ngModel)]="post.precio" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha de Caducidad</ion-label>
+    <ion-input type="text" [(ngModel)]="post.fecha" required></ion-input>
+  </ion-item>
+
+  <ion-button
+    class="ion-padding"
+    color="primary"
+    expand="full"
+    (click)="createPost(post)"
+    >Agregar</ion-button
+  >
+</ion-content>

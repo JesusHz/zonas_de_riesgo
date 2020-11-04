@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Cuerpos de agua</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addCuerpo()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let cuerpo of cuerpos">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2><b>ID: </b>{{ cuerpo.itemID }}</h2>
+          <h2><b>Nombre: </b>{{ cuerpo.nombre_municipio }}</h2>
+          <h2><b>Cuerpo de agua: </b></h2><p>{{ cuerpo.cuerpo }}</p>
+          <h2><b>Capacidad: </b>{{ cuerpo.capacidad }}</h2>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option (click)="editCuerpo(cuerpo.id)">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteCuerpo(cuerpo.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+<ion-button
+    class="ion-padding"
+    color="light"
+    expand="full"
+    [routerLink]="['/home']"
+    >Regresar</ion-button
+  >

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Nuevo Municipio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Clave IGECEM</ion-label>
+    <ion-input type="text" [(ngModel)]="riesgo.itemID" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="riesgo.nombre_municipio" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Poblacion</ion-label>
+    <ion-input type="text" [(ngModel)]="riesgo.riesgo" required></ion-input>
+  </ion-item>
+
+ 
+
+  <ion-button
+    class="ion-padding"
+    color="primary"
+    expand="full"
+    (click)="createRiesgo(riesgo)"
+    >Agregar</ion-button
+  >
+</ion-content>

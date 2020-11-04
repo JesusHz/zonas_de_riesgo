@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Editar Municipio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Clave IGECEM</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.itemID" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.nombre_municipio" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Significado</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.significado" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cabecera</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.cabecera" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Superficie</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.superficie" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Altitud</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.altitud" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Clima</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.clima" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Localizacion</ion-label>
+    <ion-input type="text" [(ngModel)]="municipio.localizacion" required></ion-input>
+  </ion-item>
+
+  <ion-button
+    class="ion-padding"
+    color="primary"
+    expand="full"
+    (click)="updateMunicipio(municipio)"
+    >Actualizar</ion-button
+  >
+</ion-content>
